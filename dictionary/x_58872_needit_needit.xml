@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element label="Solicitado para" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="depto_legal" label="Tipo de solicitud" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos Humanos" sequence="0" value="rh"/>
+                <element inactive_on_update="false" label="Instalaciones" sequence="1" value="instalaciones"/>
+                <element inactive_on_update="false" label="Departamento Legal" sequence="2" value="depto_legal"/>
+                <element inactive_on_update="false" label="Mi departamento" sequence="3" value="su_depto"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="departamento_legal1" label="Que necesito" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos Humanos 1" sequence="0" value="rh1"/>
+                <element inactive_on_update="false" label="Recursos Humanos 2" sequence="1" value="rh2"/>
+                <element inactive_on_update="false" label="Instalaciones 1" sequence="2" value="instalaciones1"/>
+                <element inactive_on_update="false" label="Instalaciones 2" sequence="3" value="instalaciones2"/>
+                <element inactive_on_update="false" label="Departamento Legal 1" sequence="4" value="departamento_legal1"/>
+                <element inactive_on_update="false" label="Departamento Legal 2" sequence="5" value="departamento_legal2"/>
+                <element inactive_on_update="false" label="Mi departamento 1" sequence="6" value="mi_departamento1"/>
+                <element inactive_on_update="false" label="Mi departamento 2" sequence="7" value="mi_departamento 2"/>
+            </choice>
+        </element>
+        <element label="Cuando sea necesario" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
